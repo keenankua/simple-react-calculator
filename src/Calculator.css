@@ -1,0 +1,110 @@
+.calculator {
+  background-color: #222;
+
+  padding: 0.4rem;
+}
+
+.calculator .screen {
+  width: 100%;
+  height: 10rem;
+}
+
+.calculator .buttons {
+  display: grid;
+  gap: 0.3rem;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". clear delete divide"
+    "seven eight nine multiply"
+    "four five six subtract"
+    "one two three add"
+    ". zero decimal equals";
+}
+
+.calculator .buttons button {
+  cursor: pointer;
+  height: 8rem;
+  width: 8rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 0.6rem;
+  border: none;
+}
+
+.calculator .buttons button.number {
+  background-color: #666;
+}
+
+.calculator .buttons button.zero {
+  grid-area: zero;
+}
+
+.calculator .buttons button.one {
+  grid-area: one;
+}
+
+.calculator .buttons button.two {
+  grid-area: two;
+}
+
+.calculator .buttons button.three {
+  grid-area: three;
+}
+
+.calculator .buttons button.four {
+  grid-area: four;
+}
+
+.calculator .buttons button.five {
+  grid-area: five;
+}
+
+.calculator .buttons button.six {
+  grid-area: six;
+}
+
+.calculator .buttons button.seven {
+  grid-area: seven;
+}
+
+.calculator .buttons button.eight {
+  grid-area: eight;
+}
+
+.calculator .buttons button.nine {
+  grid-area: nine;
+}
+
+.calculator .buttons button.add {
+  grid-area: add;
+}
+
+.calculator .buttons button.subtract {
+  grid-area: subtract;
+}
+
+.calculator .buttons button.multiply {
+  grid-area: multiply;
+}
+
+.calculator .buttons button.divide {
+  grid-area: divide;
+}
+
+.calculator .buttons button.equals {
+  grid-area: equals;
+  background-color: forestgreen;
+}
+
+.calculator .buttons button.decimal {
+  grid-area: decimal;
+}
+
+.calculator .buttons button.delete {
+  grid-area: delete;
+}
+
+.calculator .buttons button.clear {
+  grid-area: clear;
+}
