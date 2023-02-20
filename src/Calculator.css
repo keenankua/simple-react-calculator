@@ -26,11 +26,11 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   grid-template-areas:
-    ". clear delete divide"
+    "clear clear delete divide"
     "seven eight nine multiply"
     "four five six subtract"
     "one two three add"
-    ". zero decimal equals";
+    "plusMinus zero decimal equals";
 }
 
 .calculator .buttons button {
@@ -117,6 +117,10 @@
 
 .calculator .buttons button.delete {
   grid-area: delete;
+}
+
+.calculator .buttons button.plusMinus {
+  grid-area: plusMinus;
 }
 
 .calculator .buttons button.clear {

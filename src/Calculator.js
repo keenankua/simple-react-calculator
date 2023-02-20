@@ -60,7 +60,19 @@ export default function Calculator() {
         } else {
           setFirstNumber(firstNumber.slice(0, -1));
         }
+      } else if (input === "+/-") {
+        // Work backwards to figure out if we're toggling for first or second number
+        if (secondNumber !== "") {
+          // parseInt(secondNumber)
+          setSecondNumber(-secondNumber);
+        } else if (firstNumber !== "") {
+          // Only toggle pos/neg for first number if there's no active operation (ie. on the left side of the equation)
+          if (activeOperation === "") {
+            setFirstNumber(-firstNumber);
+          }
+        }
       } else if (input === "Delete") {
+        // Input from keyboard delete key
         clearInput();
       } else {
         // Must be a digit or decimal
@@ -162,6 +174,9 @@ export default function Calculator() {
         </button>
         <button onClick={handleInput} value="del" className="delete">
           DEL
+        </button>
+        <button onClick={handleInput} value="+/-" className="plusMinus">
+          +/-
         </button>
         <button onClick={clearInput} className="clear">
           C
